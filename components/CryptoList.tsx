@@ -17,7 +17,7 @@ interface fetchList {
 
 const CryptoList: React.FC<fetchList> = ({filteredList, setCurrentCrypto, setPrice, setLoading, baseURL, setOpenList, setQuery}) =>{
 
-    const select = async(item: any) => { 
+    const select = (item: any) => { 
       fetchData(setPrice, setCurrentCrypto, setLoading, baseURL, setOpenList, item.id)
       setQuery(item.name)
     }
